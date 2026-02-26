@@ -53,3 +53,21 @@ nav {
 .nav-links a:hover {
   border-bottom: 2px solid #222;
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 32px;
+  color: #222;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue */
+  transform: scale(1.2);
+}
