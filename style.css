@@ -15,22 +15,26 @@ header {
 .about {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-.about-text {
-  flex: 2;
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;      /* makes it round */
+  object-fit: cover;      /* prevents distortion */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-.about-photo img {
-  width: 220px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  margin-top: 0;
 }
 
 /* Mobile friendly */
@@ -38,10 +42,6 @@ header {
   .about {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-photo img {
-    width: 180px;
   }
 }
 
