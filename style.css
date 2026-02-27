@@ -1,24 +1,37 @@
+/* Define a sky-blue accent (one place only) */
+:root {
+  --accent: #6bb7e8; /* sky blue */
+  --hover-blue: #1f3b5c; /* dark blue for hover */
+  --dark-bg: #0f1115;
+  --dark-card: #161a22;
+  --text-light: #e6e6e6;
+  --text-muted: #b5b5b5;
+}
+/* Body & global background (dark mode)*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f4f4;
-  color: #333;
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
+/* Header (dark + sky blue accent)*/
 header {
-  background: #222;
+  background: #111;
   color: white;
   padding: 40px 20px;
   text-align: center;
 }
-
+/* about section*/
 .about {
   display: flex;
   align-items: center;
   gap: 40px;
   max-width: 900px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 30px;
+  background: var(--dark-card);
+  border-radius: 10px;
 }
 
 .about-photo img {
@@ -26,15 +39,17 @@ header {
   height: 200px;
   border-radius: 50%;      /* makes it round */
   object-fit: cover;      /* prevents distortion */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
 .about-text {
   flex: 1;
+  color: var(--text-muted);
 }
 
 .about-text h2 {
   margin-top: 0;
+  color: white;
 }
 
 /* Mobile friendly */
@@ -45,31 +60,27 @@ header {
   }
 }
 
-
+/* CV section*/
 .cv {
   max-width: 900px;
   margin: 80px auto;
-  padding: 0 20px;
-}
-
-.cv-actions {
-  margin: 20px 0 30px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  padding: 30px;
+  background: var(--dark-card);
+  border-radius: 10px;
 }
 
 .cv-btn {
   padding: 10px 22px;
-  background: #2c4a7a;
-  color: #fff;
+  background: var(--accent);
+  color: #0f1115;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .cv-btn.secondary {
-  background: #555;
+  background: #444;
+  color: white;
 }
 
 .cv-frame {
@@ -86,6 +97,8 @@ header {
   }
 }
 
+/* Section titles (sky-blue underline)*/
+
 section {
   max-width: 800px;
   margin: 40px auto;
@@ -93,55 +106,45 @@ section {
 }
 
 h2 {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--accent);
   padding-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
   color: white;
 }
 
-nav {
-  background: #f8f8f8;
-  padding: 10px 0;
-}
+/* Navigation (dark tabs style)*/
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
+nav {
+  background: #111;
+  padding: 12px 0;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color: #222;
+  color: var(--text-light);
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
+/* Social icons (sky blue hover)*/
 .social-links a {
   font-size: 32px;
-  color: #222;
+  color: var(--text-muted);
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
-  color: #0077b5; /* LinkedIn blue */
+  color: var(--accent);
   transform: scale(1.2);
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: var(--text-muted);
+}
+
