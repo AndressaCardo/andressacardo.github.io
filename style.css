@@ -35,7 +35,7 @@ header {
 }
 
 .about-photo img {
-  margin-top: 30px; /* increase to move image further down */
+  margin-top: 50px; /* increase to move image further down */
   width: 200px;
   height: 200px;
   border-radius: 50%;      /* makes it round */
@@ -116,7 +116,18 @@ h2 {
 
 nav {
   background: #111;
-  padding: 12px 0;
+  padding: 14px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+  gap: 40px;                 /* space between tabs */
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;         /* FORCE single row */
 }
 
 .nav-links a {
@@ -124,7 +135,8 @@ nav {
   text-decoration: none;
   font-weight: bold;
   color: var(--text-light);
-  padding: 8px 0;
+  padding: 6px 0;
+  white-space: nowrap;       /* prevents text breaking */
   transition: color 0.3s ease;
 }
 
