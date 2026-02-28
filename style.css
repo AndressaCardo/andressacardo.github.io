@@ -64,30 +64,57 @@ header {
 .hero {
   position: relative;
   min-height: 70vh;
-  background-image: url("images/20230422_194706.jpg"); /* ← YOUR IMAGE */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
+/* IMAGE */
+.hero-image {
+  width: 75%;              /* makes it smaller */
+  max-width: 1100px;
+  height: 420px;
+
+  background-image: url("images/20230422_194706.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 40px;     /* 👈 soft circular edges */
+  overflow: hidden;
+
+  position: absolute;
+  z-index: 1;
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+}
+
+/* Dark overlay ON the image */
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7); /* adjust darkness */
+  width: 75%;
+  max-width: 1100px;
+  height: 420px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 40px;
+
+  z-index: 2;
 }
 
+/* TEXT */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   color: white;
+  text-align: center;
   max-width: 900px;
   padding: 2rem;
 }
+
+.hero-image {
+  
+}
+
 
 /* CV section*/
 .cv {
