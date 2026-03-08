@@ -237,6 +237,22 @@ nav {
   color: var(--hover-blue); /* dark blue by default */
   transition: transform 0.3s ease, color 0.2s ease;
   text-decoration: none;
+
+/* photography page*/
+.photography-page h1{
+font-size:40px;
+text-align:center;
+}
+
+.photography-page .gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+gap:20px;
+}
+
+.photography-page img{
+border-radius:8px;
+}
   border-bottom: none;
 }
 
