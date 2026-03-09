@@ -270,6 +270,14 @@ text-align:center;
 color:#444;
 }
 
+.photography-page .photo-grid img{
+transition:transform .25s ease;
+}
+
+.photography-page .photo-grid img:hover{
+transform:scale(1.04);
+}
+
 .social-links a::after {
   content: none;
 }
