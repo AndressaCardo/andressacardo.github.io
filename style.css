@@ -239,9 +239,9 @@ nav {
   text-decoration: none;
 
 /* photography page*/
-.photography-page h1{
-font-size:40px;
-text-align:center;
+.photography-page .language{
+font-weight:bold;
+color:skyblue;
 }
 
 .photography-page .photo-grid{
