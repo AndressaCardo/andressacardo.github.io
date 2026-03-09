@@ -244,16 +244,30 @@ font-size:40px;
 text-align:center;
 }
 
-.photography-page .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-gap:20px;
+.photography-page .photo-grid{
+column-count:3;
+column-gap:18px;
+max-width:900px;
+margin:auto;
 }
 
-.photography-page img{
-border-radius:8px;
+.photography-page .photo-grid figure{
+break-inside:avoid;
+margin-bottom:18px;
 }
-  border-bottom: none;
+
+.photography-page .photo-grid img{
+width:100%;
+border-radius:18px;
+padding:3px;
+background:linear-gradient(135deg,#ff7ecb,#7ea7ff,#7effc6);
+}
+
+.photography-page figcaption{
+font-size:13px;
+margin-top:6px;
+text-align:center;
+color:#444;
 }
 
 .social-links a::after {
