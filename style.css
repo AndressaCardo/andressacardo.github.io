@@ -245,30 +245,33 @@ color:skyblue;
 }
 
 .photography-page .photo-grid{
-display:flex;
-flex-wrap:wrap;
-gap:6px;
-margin:auto;
+display:grid;
+grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+gap:4px;
+background: #111;
+padding: 8px;
+max-width: 320px;
+border-radius: 16px;
 }
 
 .photography-page .photo-grid figure{
-width:90px;
 margin:0;
 }
 
 .photography-page .photo-grid img{
-width:90px;
-height:70px;
+width:100px;
+height:60px;
 object-fit:cover;
-border-radius:14px;
+border-radius:10px;
 padding:2px;
 background:linear-gradient(135deg,#ff7ecb,#7ea7ff,#7effc6);
 }
 
 .photography-page figcaption{
-font-size:11px;
+font-size:9px;
 text-align:center;
-margin-top:4px;
+margin-top:2px;
+line-height: 1.1;
 }
 
 
